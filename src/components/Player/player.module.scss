@@ -77,6 +77,8 @@
   }
 
   @media (max-width: 1024px) {
+    box-shadow: none;
+  
     img {
       display: none !important;
     }
@@ -96,7 +98,7 @@
       font-size: 1rem;
       line-height: 1.5rem;
       font-weight: 400;
-      margin-bottom: 1rem;
+      margin: 0;
     }
 
     span {
@@ -209,8 +211,13 @@
     }
   }
 
+  @media (max-width: 1024px) {
+    padding-bottom: 2rem;
+  }
+
   @media (max-width: 767px) {
     margin-top: 1rem;
+    padding-bottom: 0;
 
     button {
       &.playButton {
