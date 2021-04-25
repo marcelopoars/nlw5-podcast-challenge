@@ -1,0 +1,238 @@
+.homePage {
+  padding: 0 4rem;
+  height: calc(100vh - 6.5rem);
+  overflow-y: scroll;
+
+  h2 {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+
+    &::before {
+      content: "";
+      border-left: 0.25rem solid var(--green-500);
+      padding-left: 1rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 2.5rem;
+    padding-bottom: 15rem;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 1.5rem;
+    padding-bottom: 10rem;
+
+    h2 {
+      margin-top: 3rem;
+    }
+  }
+}
+
+.latesEpisodes {
+  ul {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+
+    li {
+      background-color: #0d0a14;
+      border: 1px dotted var(--purple-500);
+      border-radius: 1rem;
+      padding-right: 1rem;
+
+      box-shadow: rgb(13, 10, 20) 0px 0.25rem 1rem;
+
+      display: flex;
+      align-items: center;
+      flex-wrap: nowrap;
+
+      .row {
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+
+      img:not(button img) {
+        width: 6rem;
+        height: auto;
+        border-radius: 1rem 0 0 1rem;
+      }
+
+      .episodeDetails {
+        flex: 1;
+        padding: 1rem;
+
+        a {
+          display: inline-block;
+          color: var(--gray-200);
+          font-family: Lexend, sans-serif;
+          font-weight: 600;
+          text-decoration: none;
+          line-height: 1.4rem;
+
+          &:hover {
+            text-decoration: underline;
+            color: var(--purple-300);
+          }
+        }
+
+        p {
+          font-size: 0.875rem;
+          margin: 0.5rem 0;
+          width: 95%;
+        }
+
+        span {
+          display: inline-block;
+          margin-top: auto;
+          font-size: 0.875rem;
+
+          color: var(--green-500);
+
+          &:last-child {
+            margin-left: 0.5rem;
+            padding-left: 0.5rem;
+            position: relative;
+
+            &::before {
+              content: "";
+              width: 4px;
+              height: 4px;
+              border-radius: 50%;
+              background: var(--green-500);
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+
+      button {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 2px solid var(--green-500);
+        background-color: #0d0a14;
+        border-radius: 0.675rem;
+        font-size: 0;
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    ul {
+      grid-template-columns: 1fr;
+      margin-bottom: 4rem;
+
+      li {
+        a {
+          font-weight: 400!important;
+        }
+
+      }
+    }
+
+    p {
+      display: none;
+    }
+
+  }
+}
+
+.allEpisodes {
+  padding-bottom: 2rem;
+
+  .thumb {
+    width: 72px;
+  }
+
+  .publishedAt {
+    width: 100px;
+  }
+
+  table {
+    width: 100%;
+
+    th,
+    td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px dotted var(--purple-500);
+    }
+
+    th {
+      color: var(--gray-200);
+      text-transform: uppercase;
+      font: 500 0.75rem Lexend, sans-serif;
+      text-align: left;
+    }
+
+    td {
+      font-size: 0.875rem;
+
+      img {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+      }
+
+      a {
+        color: var(--gray-200);
+        // font-weight: 600;
+        text-decoration: none;
+        line-height: 1.4rem;
+        font-size: 1rem;
+
+        &:hover {
+          color: var(--green-500);
+          text-decoration: underline;
+        }
+      }
+
+      button {
+        width: 2rem;
+        height: 2rem;
+        border: 2px solid var(--green-500);
+        background-color: #0d0a14;
+        border-radius: 0.675rem;
+        font-size: 0;
+
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .members,
+    .duration {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    table {
+      td,
+      th {
+        padding: 0.5rem 0.5rem 0.5rem 0;
+      }
+    }
+
+    .thumb {
+      width: 50px;
+    }
+
+    .publishedAt {
+      display: none;
+    }
+  }
+}

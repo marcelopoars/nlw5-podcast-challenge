@@ -1,0 +1,223 @@
+.playerContainer {
+  width: 22.5rem;
+  height: 100vh;
+  padding: 3rem 2.5rem;
+
+  background-color: var(--purple-500);
+  color: var(--white);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  strong {
+    font-family: Lexend, sans-serif;
+    font-weight: 600;
+  }
+
+  footer {
+    align-self: stretch;
+    &.empty .progress {
+      opacity: 0.5;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    min-width: 100%;
+    height: auto;
+    padding: 1rem 2.5rem;
+    position: fixed;
+    bottom: 0;
+  }
+
+  @media (max-width: 767px) {
+    padding: 1rem;
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    min-width: calc(100vw - 2rem);
+    border-radius: 1rem;
+
+    header {
+      display: none;
+    }
+  }
+}
+
+.currentEpisode {
+  text-align: center;
+  box-shadow: rgba(43, 40, 40, 0.781) 0px 0.05rem 1rem;
+  border-radius: 1.5rem;
+
+  padding-bottom: 1rem;
+
+  img {
+    border-radius: 1.5rem  1.5rem 0 0;
+  }
+
+  strong {
+    display: inline-block;
+    margin: 2rem 1rem 0;
+    font: 600 1.25rem Lexend, sans-serif;
+    line-height: 1.75rem;
+  }
+
+  span {
+    display: block;
+    margin: 1rem;
+    opacity: 0.6;
+    line-height: 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    img {
+      display: none !important;
+    }
+
+    strong {
+      margin-top: 1rem;
+    }
+
+    span {
+      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    strong {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.emptyPlayer {
+  width: 100%;
+  height: 20rem;
+  border: 1.5px dashed var(--purple-300);
+  border-radius: 1.5rem;
+
+  background: linear-gradient(
+    143.8deg,
+    rgba(145, 100, 258, 0.8) 0%,
+    rgba(0, 0, 0, 0)
+  );
+
+  padding: 4rem;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.progress {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+
+  span {
+    display: inline-block;
+    width: 4rem;
+    text-align: center;
+
+    &:first-child {
+      // background-color: red;
+      // min-width: 60px;
+      text-align: left;
+      // margin-right: 0.5rem;
+    }
+  }
+
+  .slider {
+    flex: 1;
+
+    .emptySlider {
+      width: 100%;
+      height: 4px;
+      background-color: var(--purple-300);
+      border-radius: 2px;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  gap: 1.5rem;
+
+  button {
+    background: transparent;
+    border: 0;
+    font-size: 0; // Ideal para centralizar a imagem
+
+    outline: none;
+
+    border: 2px solid transparent;
+
+    transition: opacity 0.2s;
+
+    &:disabled {
+      cursor: default;
+      opacity: 0.5;
+      pointer-events: none;
+    }
+
+    &:focus {
+      border: 2px solid var(--purple-300);
+    }
+
+    &:hover:not(:disabled) {
+      opacity: 0.8;
+    }
+
+    &.isActive {
+      filter: invert(0.35) sepia(1) saturate(3) hue-rotate(100deg);
+    }
+
+    &.isActive:hover {
+      filter: brightness(0.6) invert(0.35) sepia(1) saturate(3)
+        hue-rotate(100deg);
+    }
+
+    &.playButton {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 1rem;
+      background-color: var(--purple-400);
+    }
+  }
+
+  @media (max-width: 767px) {
+    margin-top: 1rem;
+
+    button {
+      &.playButton {
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

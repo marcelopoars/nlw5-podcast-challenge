@@ -1,0 +1,17 @@
+.appWrapper {
+  display: flex;
+
+  main {
+    flex: 1;
+    // max-width: calc(100vw - 26.5rem);
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    main {
+        min-width: 100%;
+    }
+  }
+}
