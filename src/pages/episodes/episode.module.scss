@@ -9,11 +9,10 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    // padding: 0 0rem;
-    // max-width: 80rem;
     margin: 0 auto;
-
-    img {
+    width: 100%;
+    
+    img:not(button img) {
       border-radius: 1rem;
     }
 
@@ -38,6 +37,30 @@
       &:hover {
         filter: brightness(0.9);
       }
+    }
+
+    @media (max-width: 767px) {
+      flex-direction: column;
+
+      img:not(button img) {
+        height: 10rem;
+      }
+
+      button {
+        position: absolute;
+
+
+        &:first-child {
+          left: 0;
+          z-index: 2;
+        }
+
+        &:last-child {
+          right: 0;
+          z-index: 2;
+        }
+      }
+
     }
   }
 
@@ -73,6 +96,12 @@
         }
       }
     }
+
+    @media (max-width: 767px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   }
 
   header,
@@ -92,10 +121,10 @@
   }
 
   @media (max-width: 1024px) {
-    padding: 3rem 6rem 15rem;
+    padding: 3rem 4rem 15rem;
   }
 
   @media (max-width: 767px) {
-    padding: 3rem 3rem 15rem;
+    padding: 3rem 2rem 15rem;
   }
 }

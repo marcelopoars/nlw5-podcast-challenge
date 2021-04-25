@@ -213,6 +213,8 @@
   }
 
   @media (max-width: 1024px) {
+    padding-bottom: 10rem;
+
     .members,
     .duration {
       display: none;
@@ -220,6 +222,8 @@
   }
 
   @media (max-width: 767px) {
+    padding-bottom: 5rem;
+
     table {
       td,
       th {
