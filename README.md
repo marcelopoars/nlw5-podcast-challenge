@@ -18,7 +18,7 @@ Projeto em `NextJs`, `TypeScript`, `Sass`, `Framer Motion`, entre outras tecnolo
 <br>
 
 ## Home / player - mobile
-![Print de tela](banner-mobile-02.png)
+![Print de tela](banner-mobile-01.png)
 
 
 <br>
