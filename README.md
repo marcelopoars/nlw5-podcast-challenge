@@ -1,8 +1,8 @@
-# Desafio NLW5 - 2021
+# Desafio NLW5 - 2021 - Rocketseat 🚀❤
 
-Projeto desenvolvido durante a NLW5 em abriel de 2021.
+Não sou designer, mas dou os meu pitacos. 🤓 Esta foi a minha proposta de interface dark mode e responsiva. ❤
 
-Projeto em `NextJs`, `TypeScript`, `Sass`, `Framer Motion`, entre outras tecnologias.
+A aplicação foi desenvolvida com `ReactJs`, `NextJs`, `TypesCript`, `Sass`, `Framer Motion`, entre outras libs bem bacanas. 
 
 <br>
 
