@@ -2,7 +2,7 @@
 
 Não sou designer, mas dou os meu pitacos. 🤓 Esta foi a minha proposta de interface dark mode e responsiva. ❤
 
-A aplicação foi desenvolvida com `ReactJs`, `NextJs`, `TypesCript`, `Sass`, `Framer Motion`, entre outras libs bem bacanas. 
+A aplicação foi desenvolvida com `ReactJs`, `NextJs`, `TypeScript`, `Sass`, `Framer Motion`, entre outras libs bem bacanas. 
 
 <br>
 
