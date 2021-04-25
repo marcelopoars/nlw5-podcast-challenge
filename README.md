@@ -14,10 +14,6 @@ Projeto em `NextJs`, `TypeScript`, `Sass`, `Framer Motion`, entre outras tecnolo
 ## Detalhe do espisódio - desktop
 ![Print de tela](banner-02.png)
 
-<br>
-
-## Home - mobile
-![Print de tela](banner-mobile-01.png)
 
 <br>
 
